@@ -1,0 +1,157 @@
+/* Pengaturan Utama */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #e11d48;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+/* Info Box */
+.info-box {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+/* Layout Grid Produk (Desktop) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Style Kartu Produk */
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+}
+
+.badge-diskon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e11d48;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.kategori {
+    color: #888;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.nama-produk {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.harga-lama {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.harga-baru {
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stok-info {
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+.status-ada {
+    color: green;
+    font-weight: bold;
+}
+
+.status-habis {
+    color: red;
+    font-weight: bold;
+}
+
+/* Tombol */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #e11d48;
+}
+
+.btn-disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* ================================================================= */
+/* MEDIA QUERIES (RESPONSIVE LAYOUT)                                 */
+/* ================================================================= */
+
+/* Layar Tablet (Max Lebar 800px) -> Ubah Layout Jadi 2 Kolom */
+@media (max-width: 800px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Layar HP (Max Lebar 500px) -> Ubah Layout Jadi 1 Kolom */
+@media (max-width: 500px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
