@@ -1,2 +1,1 @@
-Week 2 latihan membuat web 
-HTML & CSS
+Modul 1 StudyCase HTML, CSS, & PHP
